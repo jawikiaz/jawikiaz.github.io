@@ -2,24 +2,48 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8"></meta>
-	<title>Jawikiaz | Home </title>
-	<link type="text/css" rel="stylesheet" href="tipuesearch/tipuesearch.css"></link>
-	<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-	<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
-	<script type="text/javascript" src="tipuesearch/tipuesearch_content.js"></script>
-	<script type="text/javascript" src="tipuesearch/tipuesearch.min.js"></script>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0"/>
+	<title>Jawikiaz | Search</title>
+	<link type="text/css" rel="stylesheet" href="./tipuesearch/tipuesearch.css"></link>
+	<script type="text/javascript" src="./tipuesearch/jquery.min.js"></script>
+	<script type="text/javascript" src="./tipuesearch/tipuesearch.js"></script>
 	<style type="text/css">
+	.srch {
+		display:inline-block;
+		padding: 5px;
+	}
 	button {
-		margin: 10px;
-		font-size: 120%;
+		margin-left: 5px;
+	}
+	body, h1, h2, nav, form {
+		margin: 0px;
+		padding: 0px;
+	}
+	div {
+		margin: 15px;
 	}
 	</style>
 </head>
-<body>
-<h1 align="center">Jawikiaz</h1>
-<form align="center" action="./system-search/search.html">
-<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
-<br><button align="center">Search</button>
-</form>
-</body>
+<body><div class="maind">
+</header>
+<a href="www.jawikiaz.co.nf/index.html"><h1>Go to Jawikiaz Home Page</h1></a>
+<header>
+
+<nav><ul>
+<li class="srch" ><form action="index.html"><input type="text" name="q" id="tipue_search_input" autocomplete="off" required><button>Search</button></form></li>
+<li class="srch" ><a href="www.jawikiaz.co.nf/systemfiles/listdatabase.html"><button>Manual Search</button></a></li>
+</ul></nav>
+
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div id="tipue_search_content"></div>
+
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+$(document).ready(function() {
+ $('#tipue_search_input').tipuesearch();
+});
+</script>
+
+</div></body>
 </html>
